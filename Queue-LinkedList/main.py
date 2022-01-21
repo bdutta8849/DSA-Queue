@@ -51,7 +51,8 @@ class Queue():
     
 
   def peak(self):
-    print("Peak Is: ",self.tail.data)
+    if self.tail is not None:
+      print("Peak Is: ",self.tail.data)
 
 
 
@@ -60,9 +61,13 @@ myStack = Queue('100')
 myStack.enqueue('200')
 myStack.peak()
 myStack.enqueue('300')
+myStack.peak()
 myStack.dequeue()
+myStack.peak()
 myStack.dequeue()
+myStack.peak()
 myStack.dequeue()
+myStack.peak()
 myStack.dequeue()
 
 
